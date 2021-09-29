@@ -42,3 +42,21 @@ const add = function(x){
 
 const r4 = add(10);
 console.log(r4(10))
+
+
+
+// Private values in HoF
+const test = function(val){
+
+  let value = 1;
+  return function(x){
+    return (val*x)+value
+  }
+
+
+}
+
+
+const t = test(5)
+const r = t(10)
+console.log(r)
